@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Conecta 4</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="./jquery-3.6.4.min.js"></script>
+	<style>
+		canvas {
+			border: 2px solid black;
+			margin: 20px auto;
+			display: block;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- ? Script para llamar a nuestro PHP -->
+	<div id="formulario" class="box">
+		<!-- <img class="logo" alt="dribble-logo" src="https://www.dropbox.com/s/vwcn548w1gsk7lb/dribbble-ball-icon.png?raw=1" /> -->
+		<img class="logo" alt="dribble-logo"
+			src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6q_2jtjnvg-yQyCN4ovDjXAP2bzRKsxw7w&usqp=CAU" />
+		<p class="signin">Tic Tac Toe</p>
+		<p class="signin-text">Completa el formulario para poder jugar<br /></p>
+		<input name="player1" id="player1" type="text" placeholder="Player 1">
+		<input name="player2" id="player2" type="text" placeholder="Player 2">
+		<br />
+		<input name="numCellDom" id="numCellDom" type="number" min="6" max="10" placeholder="Num. de Celdas del gato"
+			required>
+		<button onclick="validarFormulario()">JUGAR</button>
+		<p class="foot-txt">Te ha gustado? <span class="bold"></p>
+	</div>
+
+	<!-- ?CONECTA4 -->
+	<div id="mostrar">
+		<canvas id="canvas" style="margin-top: 200px;"></canvas>
+		<script src="./script.js"></script>
+		<div style="display: inline-flex;">
+			<p>Va el Jugador: <span id="currentPLayer">..</span></p>
+			<p>Victorias: <span id="wins">0</span></p>
+			<p>Derrotas: <span id="losses">0</span></p>
+			<p>Empates: <span id="ties">0</span></p>
+		</div>
+		<div>
+			<button onclick="reset()">Jugar de nuevo</button>
+			<button onclick="playAgain()">Reiniciar Juego</button>
+			<button onclick="mostrarTopJugadores()">Mostrar mejores jugadores</button>
+		</div>
+	</div>
+	<!-- ?CONECTA4 FIN -->
+
+	<div id="mostrar-tabla-jugadores">
+		<p id="resultado">
+		<div id="tabla-jugadores"></div>
+	</div>
+
+	<div id="mostrar-tabla-jugadoresBD">
+		<p id="resultado">
+	</div>
+
+
+</body>
+
+</html>

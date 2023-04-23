@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+.players {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.players label {
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.players input {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  border: 1px solid black;
+  background-color: white;
+  cursor: pointer;
+}
+
+.cell.player-1 {
+  background-color: red;
+}
+
+.cell.player-2 {
+  background-color: yellow;
+}
+
+canvas {
+  margin: 10px auto;
+  border: 1px solid black;
+  margin-top: 450px;
+}
+
+button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: white;
+  color: blue;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans: 400,500,600');
+html,
+body {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin: auto;
+}
+
+body {
+  background: #f3f4f4;
+  font-family: 'Work Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+canvas {
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+canvas.game-over {
+  pointer-events: none;
+}
+
+.box {
+  background: #fff;
+  border-radius: 0.625rem;
+  box-shadow: 0 0 40px 0 rgb(41 189 107 / 60%);
+  display: flex;
+  flex-direction: column;
+  height: 31.25rem;
+  position: absolute;
+  width: 18.75rem;
+}
+
+.logo,
+.signin,
+input,
+button,
+.foot-txt,
+.signin-row {
+  margin: 0 auto;
+  position: relative;
+}
+
+.logo {
+  height: 3.125rem;
+  margin-top: 1.875rem;
+  width: 3.125rem;
+}
+
+p {
+  color: #444;
+  margin: 0 20px;
+}
+
+.signin {
+  font: 600 1.8rem 'Work Sans', sans-serif;
+  padding: 0.17em;
+}
+
+.signin-row {
+  display: flex;
+  justify-content: space-around;
+  margin: 0.625rem auto 0.3rem;
+  padding: 0.625rem;
+  width: 11rem;
+}
+
+.signin-row > i {
+  color: #444;
+  font-size: 2rem;
+  transition: all 0.15s ease-out;
+  -webkit-transition: all 0.15s ease-out;
+}
+
+.signin-text {
+  color: #9da3a5;
+  font: 500 0.85rem 'Work Sans', sans-serif;
+  margin: 0;
+  padding-top: 0.625rem;
+  text-align: center;
+}
+
+i:hover {
+  cursor: pointer;
+}
+
+.ic1:hover {
+  color: #1da1f2;
+}
+
+.ic2:hover {
+  color: rgba(33, 133, 78, 0.6);
+}
+
+.ic3:hover {
+  color: #4285f4;
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+  border: 0;
+  border-bottom: 2px solid #9da3a5;
+  font: 500 0.9rem 'Work Sans', sans-serif, sans-serif;
+  height: 2.15em;
+  margin-top: 0.7em;
+  transition: all 0.15s ease-out;
+  -webkit-transition: all 0.15s ease-out;
+  width: 80%;
+}
+
+input:focus {
+  border-bottom: 2px solid rgb(41 189 107 / 60%);
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  color: #9da3a5;
+}
+
+::-moz-placeholder {
+  color: #9da3a5;
+}
+
+\:-ms-input-placeholder {
+  color: #9da3a5;
+}
+
+\:-moz-placeholder {
+  color: #9da3a5;
+}
+
+button {
+  background: rgb(41 189 107 / 60%);
+  border: 0;
+  border-radius: 1.4em;
+  color: #fff;
+  font: 1.1rem 'Work Sans', sans-serif;
+  margin: 1.7em auto 0.6em;
+  outline: none;
+  padding: 0.6em;
+  transition: all 0.15s ease-out;
+  -webkit-transition: all 0.15s ease-out;
+  width: 80%;
+}
+
+button:hover {
+  background: rgba(36, 167, 95, 0.6);
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+.foot-txt {
+  color: #9da3a5;
+  font: 500 0.85rem 'Work Sans', sans-serif;
+  padding: 0.3em;
+}
+
+.foot-txt:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+@media (max-width: 530px) {
+  .box {
+    height: auto;
+    width: auto;
+  }
+}
